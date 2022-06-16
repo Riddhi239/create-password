@@ -1,0 +1,12 @@
+<div class="ip m-3">
+  <div>
+      <label>Password:</label>
+      <input placeholder="Enter the password" type="password" #input size="50%">
+  </div>
+  <button class="btn btn-success btn-lg m-3" (click)="validation(input)">Submit</button>
+  <div *ngIf="boolean">
+      <b>{{msg}}</b>
+  </div>
+</div>
+
+<app-validator [password]="data" (validationstatus)="get_data($event)"></app-validator>
